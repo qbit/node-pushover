@@ -11,7 +11,7 @@ Send pushover notifications from Node.JS
 
 ```javascript
 
-var push = require( '../lib/pushover.js' );
+var push = require( 'pushover-notifications );
 
 var p = new push( {
 	user: '',
