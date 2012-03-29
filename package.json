@@ -1,0 +1,16 @@
+{
+  "author": "Aaron Bieber <aaron@qbit.io>",
+  "name": "pushover",
+  "description": "Pushover API for node.js",
+  "version": "0.1.0",
+  "homepage": "http://github.com/qbit/node-pushover",
+  "repository": {
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
