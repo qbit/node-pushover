@@ -5,7 +5,7 @@ Send pushover notifications from Node.JS
 
 ### Install
 
-	npm install pushover
+	npm install pushover-notifications
 
 ## Examples
 
