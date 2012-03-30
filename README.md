@@ -1,7 +1,6 @@
 ![Pushover](https://pushover.net/assets/pushover-header-0f47af8e08d8bef658a999a9e6584fcc.png)
 
-# [pushover](http://pushover.net)
-Send pushover notifications from Node.JS
+Send [pushover.net](http://pushover.net) notifications from Node.JS
 
 ## Usage
 
