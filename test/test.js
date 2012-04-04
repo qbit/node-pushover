@@ -1,8 +1,8 @@
 var push = require( '../lib/pushover.js' );
 
 var p = new push( {
-	user: '',
-	token: '',
+	user: process.env['PUSHOVER_USER'],
+	token: process.env['PUSHOVER_TOKEN'],
 	debug: true
 });
 
