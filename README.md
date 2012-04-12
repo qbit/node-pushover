@@ -15,8 +15,8 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 var push = require( 'pushover-notifications' );
 
 var p = new push( {
-	user: '',
-	token: ''
+	user: process.env['PUSHOVER_USER'],
+	token: process.env['PUSHOVER_TOKEN'],
 });
 
 var msg = {
