@@ -10,6 +10,7 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 
 ## Examples
 
+### Sending a message
 ```javascript
 
 var push = require( 'pushover-notifications' );
@@ -32,4 +33,35 @@ p.send( msg, function( err, result ) {
 
 	console.log( result );
 });
+```
+
+### Sending a message to multiple users
+```javascript
+
+var users = [
+  'token1',
+  'token2',
+  'token3'
+];
+
+var msg = {
+  message: 'omg node test',
+  title: "Well - this is fantastic",
+  //priority: 1,
+};
+
+for ( var i = 0, l = users.length; i < l; i++ ) {
+
+  msg.user = users[i];
+  // token can be overwritten as well.
+
+  p.send( msg, function( err, result ) {
+    if ( err ) {
+      throw err;
+    }
+
+    console.log( result );
+  });
+}
+
 ```
