@@ -8,12 +8,15 @@ var p = new push( {
 
 var msg = {
 	message: 'omg node test',
+  sound: 'magic',
 	title: "Well - this is fantastic",
 };
 
 // console.log( p );
 
-p.send( msg, function( err, result ) {
-	console.log( err );
-	console.log( result );
-});
+setTimeout( function() {
+  p.send( msg, function( err, result ) {
+    console.log( 'error', err );
+    console.log( 'result', result );
+  });
+}, 5000);
