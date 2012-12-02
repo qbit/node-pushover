@@ -23,7 +23,8 @@ var p = new push( {
 var msg = {
 	message: 'omg node test',
 	title: "Well - this is fantastic",
-	//priority: 1,
+  sound: 'magic', // optional
+	priority: 1 // optional
 };
 
 p.send( msg, function( err, result ) {
@@ -47,7 +48,8 @@ var users = [
 var msg = {
   message: 'omg node test',
   title: "Well - this is fantastic",
-  //priority: 1,
+  sounds: 'magic' // optional
+  priority: 1 // optional,
 };
 
 for ( var i = 0, l = users.length; i < l; i++ ) {
