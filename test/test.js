@@ -18,5 +18,6 @@ setTimeout( function() {
   p.send( msg, function( err, result ) {
     console.log( 'error', err );
     console.log( 'result', result );
+    process.exit(0);
   });
 }, 5000);

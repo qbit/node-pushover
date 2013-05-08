@@ -17,4 +17,5 @@ var msg = {
 p.send( msg, function( err, result ) {
 	console.log( err );
 	console.log( result );
+  process.exit(0);
 });
