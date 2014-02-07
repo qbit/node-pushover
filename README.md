@@ -26,6 +26,7 @@ var msg = {
 	message: 'omg node test',
 	title: "Well - this is fantastic",
 	sound: 'magic', // optional
+	device: 'devicename', // optional
 	priority: 1 // optional
 };
 
