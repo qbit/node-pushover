@@ -5,7 +5,8 @@
   "version": "0.1.8",
   "homepage": "http://github.com/qbit/node-pushover",
   "repository": {
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/qbit/node-pushover.git"
   },
   "dependencies": {},
   "devDependencies": {},
