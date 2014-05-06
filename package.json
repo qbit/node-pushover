@@ -2,7 +2,7 @@
   "author": "Aaron Bieber <aaron@qbit.io>",
   "name": "pushover-notifications",
   "description": "Pushover API for node.js",
-  "version": "0.1.8.1",
+  "version": "0.1.9",
   "homepage": "http://github.com/qbit/node-pushover",
   "repository": {
     "type": "git",
