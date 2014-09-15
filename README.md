@@ -19,7 +19,7 @@ var msg = {
 	device: 'test_device',
 	priority: 2,
 	url: "http://pushover.net",
-	url_title: "Pushover Website",
+	url_title: "Pushover Website"
 };
 ```
 ## Examples
@@ -44,7 +44,7 @@ var msg = {
 	title: "Well - this is fantastic",
 	sound: 'magic',
 	device: 'devicename',
-	priority: 1,
+	priority: 1
 };
 
 p.send( msg, function( err, result ) {
