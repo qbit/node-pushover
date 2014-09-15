@@ -7,6 +7,10 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 ### Install
 
 	npm install pushover-notifications
+	
+### Pushover API values
+
+Any API paramaters can be specified, for example, `retry` and `expire` can be added to the object being passed to .send!
 
 ## Examples
 
