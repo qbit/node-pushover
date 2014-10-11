@@ -7,7 +7,21 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 ### Install
 
 	npm install pushover-notifications
+	
+### Pushover API values
 
+Any API paramaters, as found on https://pushover.net/api, can be passed in the object. For example, `retry` and `expire` can be added to the object being passed to `.send`! Here's an example with many different parameters.
+```javascript
+var msg = {
+	message: "This is a message",
+	title: "Well - this is fantastic",
+	sound: 'magic',
+	device: 'test_device',
+	priority: 2,
+	url: "http://pushover.net",
+	url_title: "Pushover Website"
+};
+```
 ## Examples
 
 ### Sending a message
@@ -24,11 +38,13 @@ var p = new push( {
 });
 
 var msg = {
-	message: 'omg node test',
+	// These values correspond to the parameters detailed on https://pushover.net/api
+	// 'message' is required. All other values are optional.
+	message: 'omg node test',	// required
 	title: "Well - this is fantastic",
-	sound: 'magic', // optional
-	device: 'devicename', // optional
-	priority: 1 // optional
+	sound: 'magic',
+	device: 'devicename',
+	priority: 1
 };
 
 p.send( msg, function( err, result ) {
