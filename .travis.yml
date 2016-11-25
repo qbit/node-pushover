@@ -17,5 +17,5 @@ addons:
       description: "Build submitted via Travis CI"
     notification_email: aaron@bolddaemon.com
     build_command_prepend: ""
-    build_command:   "npm test"
+    build_command:   "--no-command --fs-capture-search ./lib/"
     branch_pattern: master
