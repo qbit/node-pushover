@@ -10,7 +10,7 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 	
 ### Pushover API values
 
-Any API paramaters, as found on https://pushover.net/api, can be passed in the object. For example, `retry` and `expire` can be added to the object being passed to `.send`! Here's an example with many different parameters.
+Any API parameters, as found on https://pushover.net/api, can be passed in the object. For example, `retry` and `expire` can be added to the object being passed to `.send`! Here's an example with many different parameters.
 ```javascript
 var msg = {
 	message: "This is a message",
