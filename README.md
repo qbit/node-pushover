@@ -2,6 +2,8 @@
 
 Send [pushover.net](http://pushover.net) notifications from Node.JS
 
+[![Build Status](https://travis-ci.org/qbit/node-pushover.svg?branch=master)](https://travis-ci.org/qbit/node-pushover)
+
 ## Usage
 
 ### Install
