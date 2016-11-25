@@ -17,5 +17,5 @@ addons:
       description: "Build submitted via Travis CI"
     notification_email: aaron@bolddaemon.com
     build_command_prepend: ""
-    build_command:   "node test/test.js"
+    build_command:   "npm test"
     branch_pattern: master
