@@ -1,21 +1,20 @@
 language: node_js
 node_js:
-- 'node'
+- node
 env:
-  matrix:
-    secure: q4cn2rHpxQ8QMnF6Pafp9LZPidN3wQuwlapT19dEL73wcq/IeBrFka97LcS3ZoKYGA8oM7Pt0lU9HlkbSnIUOEE+QIo+RWcNVZtaTs4aRbXlOrvaAuCk5o+/s664ETdAnfHToA6RjzhqDcmFpDp7SOZki9XBOCDGJQIiOuzeQEM=
   global:
-   - secure: "cji+CqW+TmOqGBGk30ijZRGZ9zwpVCncp6iptnpMXhEqBmGJ1Q15rEWZxAyqbqHeEsPqAlT1FecjuyCnTSVowxLJvfwLKUtsqeXSazNRJey22jee648UfNNxGSUjAL2fCK9AQlTZ0k4Jc0xVqodGNrQbzA2K82BC7oG6wOZDji0="
-
+  - secure: cji+CqW+TmOqGBGk30ijZRGZ9zwpVCncp6iptnpMXhEqBmGJ1Q15rEWZxAyqbqHeEsPqAlT1FecjuyCnTSVowxLJvfwLKUtsqeXSazNRJey22jee648UfNNxGSUjAL2fCK9AQlTZ0k4Jc0xVqodGNrQbzA2K82BC7oG6wOZDji0=
+  matrix:
+    secure: BX0GyzK8qZAFJlpzJ2nLiaAy0e/wYmYhKTpRcMRcsipfoGeQSQ18B1HqC3Vy9SGc0hox8sVwS8KUPwMd0ZqRC0wOc57PioJC5bDmOZ48bQcREITlcO2b8RGaEdDosIXdinJ346LHUPccDGXLp2ZdKqVE4IV+xRA8o86KoTKmhh8=
 before_install:
-      - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
-
+- echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END
+  CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 addons:
   coverity_scan:
     project:
-      name: "qbit/node-pushover"
-      description: "Build submitted via Travis CI"
+      name: qbit/node-pushover
+      description: Build submitted via Travis CI
     notification_email: aaron@bolddaemon.com
-    build_command_prepend: ""
-    build_command:   "--no-command --fs-capture-search ./lib/"
+    build_command_prepend: ''
+    build_command: "--no-command --fs-capture-search ./lib/"
     branch_pattern: master
