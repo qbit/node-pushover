@@ -17,4 +17,4 @@ addons:
     notification_email: aaron@bolddaemon.com
     build_command_prepend: ''
     build_command: "--no-command --fs-capture-search ./lib/"
-    branch_pattern: master
+    branch_pattern: coverity
