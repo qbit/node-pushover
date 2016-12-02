@@ -7,7 +7,7 @@ var p = new push( {
 });
 
 var msg = {
-	message: 'omg node test',
+	message: 'test from ' + process.argv[1],
 	title: "Well - this is fantastic",
   user: process.env['PUSHOVER_USER']
 };

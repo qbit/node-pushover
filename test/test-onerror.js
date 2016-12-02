@@ -11,7 +11,7 @@ var p = new push( {
 });
 
 var msg = {
-	message: 'omg node test',
+	message: 'test from ' + process.argv[1],
 	sound: 'magic',
 	title: "Well - this is fantastic",
 };
