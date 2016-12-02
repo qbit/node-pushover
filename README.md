@@ -4,6 +4,8 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 
 [![Build Status](https://travis-ci.org/qbit/node-pushover.svg?branch=master)](https://travis-ci.org/qbit/node-pushover)
 [![Coverity Scan Build Status](https://img.shields.io/coverity/scan/10939.svg)](https://scan.coverity.com/projects/qbit-node-pushover)
+
+
 [![NPM](https://nodei.co/npm/pushover-notifications.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pushover-notifications/)
 
 ## Usage
