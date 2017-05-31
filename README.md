@@ -1,4 +1,4 @@
-![Pushover](https://pushover.net/assets/pushover-header-0f47af8e08d8bef658a999a9e6584fcc.png)
+![Pushover](img/pushover-header.png)
 
 Send [pushover.net](http://pushover.net) notifications from Node.JS
 
@@ -13,7 +13,7 @@ Send [pushover.net](http://pushover.net) notifications from Node.JS
 ### Install
 
 	npm install pushover-notifications
-	
+
 ### Pushover API values
 
 Any API parameters, as found on https://pushover.net/api, can be passed in the object. For example, `retry` and `expire` can be added to the object being passed to `.send`! Here's an example with many different parameters.
