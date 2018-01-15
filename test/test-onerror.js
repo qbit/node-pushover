@@ -5,12 +5,14 @@ var p = new Push({
   token: process.env['PUSHOVER_TOKEN'] + 'ERROR_TEST',
   update_sounds: false,
   debug: true,
-  onerror: function (err) {
+  onerror: function (err, res) {
     console.log('ERROR!', err)
     if (err.match('application token is invalid')) {
+      if (res) {
+        console.log(res.headers)
+      }
       process.exit(0)
     } else {
-      console.log('OMG')
       process.exit(1)
     }
   }
