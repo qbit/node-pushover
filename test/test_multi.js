@@ -1,21 +1,21 @@
-var push = require( '../lib/pushover.js' );
+var Push = require('../lib/pushover.js')
 
-var p = new push( {
-	// user: process.env['PUSHOVER_USER'],
-	token: process.env['PUSHOVER_TOKEN'],
-	debug: true
-});
+var p = new Push({
+  // user: process.env['PUSHOVER_USER'],
+  token: process.env['PUSHOVER_TOKEN'],
+  debug: true
+})
 
 var msg = {
-	message: 'test from ' + process.argv[1],
-	title: "Well - this is fantastic",
+  message: 'test from ' + process.argv[1],
+  title: 'Well - this is fantastic',
   user: process.env['PUSHOVER_USER']
-};
+}
 
 // console.log( p );
 
-p.send( msg, function( err, result ) {
-	console.log( err );
-	console.log( result );
-  process.exit(0);
-});
+p.send(msg, function (err, result) {
+  console.log(err)
+  console.log(result)
+  process.exit(0)
+})

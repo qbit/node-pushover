@@ -2,7 +2,7 @@
   "author": "Aaron Bieber <aaron@qbit.io>",
   "name": "pushover-notifications",
   "description": "Pushover API for node.js",
-  "version": "0.2.4",
+  "version": "1.0.0",
   "homepage": "http://github.com/qbit/node-pushover",
   "repository": {
     "type": "git",
@@ -15,6 +15,6 @@
     "node": "*"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "standard && pkill tinyproxy ; tinyproxy -c test/tinyproxy.conf && set -e; for t in test/*.js; do node $t; done"
   }
 }

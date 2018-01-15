@@ -1,1 +1,1 @@
-module.exports = require( './lib/pushover' );
+module.exports = require('./lib/pushover')
