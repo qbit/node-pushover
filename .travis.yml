@@ -7,6 +7,8 @@ env:
   matrix:
     secure: BX0GyzK8qZAFJlpzJ2nLiaAy0e/wYmYhKTpRcMRcsipfoGeQSQ18B1HqC3Vy9SGc0hox8sVwS8KUPwMd0ZqRC0wOc57PioJC5bDmOZ48bQcREITlcO2b8RGaEdDosIXdinJ346LHUPccDGXLp2ZdKqVE4IV+xRA8o86KoTKmhh8=
 before_install:
+- sudo apt-get -qq update
+- sudo apt-get install -y tinyproxy
 - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END
   CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 addons:
