@@ -12,7 +12,7 @@ var msg = {
   message: 'test from ' + process.argv[1],
   sound: 'magic',
   title: 'Testing attachment',
-  attachment: fs.createReadStream('../img/pushover-header.png')
+  attachment: fs.createReadStream('img/pushover-header.png')
 }
 
 // console.log( p );
@@ -24,7 +24,7 @@ p.send(msg, function (err, result, res) {
   // process.exit(0);
 })
 
-fs.readFile('../img/pushover-header.png', function (err, data) {
+fs.readFile('img/pushover-header.png', function (err, data) {
   if (err) throw err;
 
   msg = {
