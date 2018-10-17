@@ -95,3 +95,69 @@ for ( var i = 0, l = users.length; i < l; i++ ) {
   })
 }
 ```
+
+### Sending a message with an image attachment
+
+```javascript
+
+var fs = require( 'fs' )
+var Push = require( 'pushover-notifications' )
+
+var p = new Push( {
+  user: process.env['PUSHOVER_USER'],
+  token: process.env['PUSHOVER_TOKEN'],
+})
+
+var msg = {
+  message: 'omg node test',	// required
+  title: "Well - this is fantastic - an attachment",
+  sound: 'magic',
+  device: 'devicename',
+  attachment: fs.createReadStream('path/to/image.jpg'),
+  priority: 1
+}
+
+p.send( msg, function( err, result ) {
+  if ( err ) {
+    throw err
+  }
+
+  console.log( result )
+})
+```
+
+### Sending a message with an image attachment from a Buffer
+
+```javascript
+
+var fs = require( 'fs' )
+var Push = require( 'pushover-notifications' )
+
+var p = new Push( {
+  user: process.env['PUSHOVER_USER'],
+  token: process.env['PUSHOVER_TOKEN'],
+})
+
+// data is a Buffer object holding contents of image.jpg
+fs.readFile('path/to/image.jpg', function (err, data) {
+  if (err) throw err;
+
+  var msg = {
+    message: 'omg node test',	// required
+    title: "Well - this is fantastic - an attachment from a buffer",
+    sound: 'magic',
+    device: 'devicename',
+    attachment: data
+    priority: 1
+  }
+
+  p.send( msg, function( err, result ) {
+    if ( err ) {
+      throw err
+    }
+
+    console.log( result )
+  })
+})
+
+```
