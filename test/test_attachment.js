@@ -11,7 +11,7 @@ var p = new Push({
 var msg = {
   message: 'test from ' + process.argv[1],
   sound: 'magic',
-  title: 'Well - this is fantastic',
+  title: 'Testing attachment',
   attachment: fs.createReadStream('../img/pushover-header.png')
 }
 
@@ -23,3 +23,19 @@ p.send(msg, function (err, result, res) {
   console.log('res.headers', res.headers)
   // process.exit(0);
 })
+
+fs.readFile('../img/pushover-header.png', function (err, data) {
+  if (err) throw err;
+
+  msg = {
+    message: 'test from ' + process.argv[1],
+    title: 'Testing attachment from buffer',
+    attachment: data
+  }
+
+  p.send(msg, function (err, result, res) {
+    console.log('error', err)
+    console.log('result', result)
+    console.log('res.headers', res.headers)
+  })
+});
