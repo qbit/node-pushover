@@ -80,6 +80,8 @@ var msg = {
   title: "Well - this is fantastic",
   sound: 'magic' // optional
   priority: 1 // optional,
+  file: '/tmp/fancy_image.png' // optional
+  // see test/test_img.js for more examples of attaching images
 }
 
 for ( var i = 0, l = users.length; i < l; i++ ) {
