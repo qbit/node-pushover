@@ -22,7 +22,8 @@ fs.readFile('test/test_img.png', function(err, data) {
   }
 
   p.send(msg, function (err, result, res) {
-    if (err !== null) {
+    console.log('====> Async image test')
+    if (err) {
       console.log(err)
       process.exit(1)
     }
@@ -38,7 +39,8 @@ var msg = {
 }
 
 p.send(msg, function (err, result, res) {
-  if (err !== null) {
+  console.log('====> Sync image test')
+  if (err) {
     console.log(err)
     process.exit(1)
   }

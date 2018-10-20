@@ -13,7 +13,8 @@ var msg = {
 }
 
 p.send(msg, function (err, result) {
-  if (err !== null) {
+  console.log('====> Multi test')
+  if (err) {
     console.log(err)
     process.exit(1)
   }

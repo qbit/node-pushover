@@ -25,4 +25,5 @@ var msg = {
 }
 
 p.send(msg, function (err, result, res) {
+  console.log('====> On error test')
 })

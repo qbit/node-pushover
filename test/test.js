@@ -13,13 +13,11 @@ var msg = {
   title: 'Well - this is fantastic'
 }
 
-// console.log( p );
-
 p.send(msg, function (err, result, res) {
   console.log('====> Regular test')
-  if (err !== null) {
+  if (err) {
     console.log(err)
     process.exit(1)
   }
-  process.exit(0);
+  process.exit(0)
 })
