@@ -12,10 +12,10 @@ var msg = {
   user: process.env['PUSHOVER_USER']
 }
 
-// console.log( p );
-
 p.send(msg, function (err, result) {
-  console.log(err)
-  console.log(result)
+  if (err !== null) {
+    console.log(err)
+    process.exit(1)
+  }
   process.exit(0)
 })

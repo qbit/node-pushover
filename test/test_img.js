@@ -22,14 +22,14 @@ fs.readFile('test/test_img.png', function(err, data) {
   }
 
   p.send(msg, function (err, result, res) {
-    console.log('error', err)
-    console.log('result', result)
-    console.log('res.headers', res.headers)
-    // process.exit(0);
+    if (err !== null) {
+      console.log(err)
+      process.exit(1)
+    }
+    process.exit(0)
   })
 })
 
-// console.log( p );
 var msg = {
   message: 'test from ' + process.argv[1],
   sound: 'magic',
@@ -38,8 +38,9 @@ var msg = {
 }
 
 p.send(msg, function (err, result, res) {
-  console.log('error', err)
-  console.log('result', result)
-  console.log('res.headers', res.headers)
-  // process.exit(0);
+  if (err !== null) {
+    console.log(err)
+    process.exit(1)
+  }
+  process.exit(0)
 })

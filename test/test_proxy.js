@@ -16,10 +16,10 @@ var msg = {
   title: 'test from'
 }
 
-// console.log( p );
-
 p.send(msg, function (err, result) {
-  console.log('error', err)
-  console.log('result', result)
-  // process.exit(0);
+  if (err !== null) {
+    console.log(err)
+    process.exit(1)
+  }
+  process.exit(0)
 })
