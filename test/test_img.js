@@ -8,29 +8,6 @@ var p = new Push({
   debug: true
 })
 
-fs.readFile('test/test_img.png', function(err, data) {
-  var o = {
-    name: 'pushover.png',
-    data: data
-  }
-
-  var msg = {
-    message: 'test from ' + process.argv[1],
-    sound: 'magic',
-    title: 'Image loaded async',
-    file: o
-  }
-
-  p.send(msg, function (err, result, res) {
-    console.log('====> Async image test')
-    if (err) {
-      console.log(err)
-      process.exit(1)
-    }
-    process.exit(0)
-  })
-})
-
 var msg = {
   message: 'test from ' + process.argv[1],
   sound: 'magic',
@@ -45,4 +22,34 @@ p.send(msg, function (err, result, res) {
     process.exit(1)
   }
   process.exit(0)
+})
+
+fs.readFile('test/test_img.png', function(err, data) {
+  var ap = new Push({
+    user: process.env['PUSHOVER_USER'],
+    token: process.env['PUSHOVER_TOKEN'],
+    update_sounds: false,
+    debug: true
+  })
+
+  var o = {
+    name: 'pushover.png',
+    data: data
+  }
+
+  var amsg = {
+    message: 'test from ' + process.argv[1],
+    sound: 'magic',
+    title: 'Image loaded async',
+    file: o
+  }
+
+  ap.send(msg, function (err, result, res) {
+    console.log('====> Async image test')
+    if (err) {
+      console.log(err)
+      process.exit(1)
+    }
+    process.exit(0)
+  })
 })

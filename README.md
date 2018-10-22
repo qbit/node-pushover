@@ -107,18 +107,18 @@ p.send( msg, function( err, result ) {
 var Push = require( 'pushover-notifications' )
 var fs = require( 'fs' )
 
-var p = new Push( {
-  user: process.env['PUSHOVER_USER'],
-  token: process.env['PUSHOVER_TOKEN'],
-  // httpOptions: {
-  //   proxy: process.env['http_proxy'],
-  //},
-  // onerror: function(error) {},
-  // update_sounds: true // update the list of sounds every day - will
-  // prevent app from exiting.
-})
-
 fs.readFile('/tmp/fantastic.png', function(err, data) {
+  var p = new Push( {
+    user: process.env['PUSHOVER_USER'],
+    token: process.env['PUSHOVER_TOKEN'],
+    // httpOptions: {
+    //   proxy: process.env['http_proxy'],
+    //},
+    // onerror: function(error) {},
+    // update_sounds: true // update the list of sounds every day - will
+    // prevent app from exiting.
+  })
+
   var msg = {
     // These values correspond to the parameters detailed on https://pushover.net/api
     // 'message' is required. All other values are optional.
