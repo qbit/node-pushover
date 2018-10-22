@@ -44,7 +44,7 @@ fs.readFile('test/test_img.png', function(err, data) {
     file: o
   }
 
-  ap.send(msg, function (err, result, res) {
+  ap.send(amsg, function (err, result, res) {
     console.log('====> Async image test')
     if (err) {
       console.log(err)
