@@ -65,6 +65,81 @@ p.send( msg, function( err, result ) {
 })
 ```
 
+### Sending a message with an attachment (blocking)
+```javascript
+
+var Push = require( 'pushover-notifications' )
+
+var p = new Push( {
+  user: process.env['PUSHOVER_USER'],
+  token: process.env['PUSHOVER_TOKEN'],
+  // httpOptions: {
+  //   proxy: process.env['http_proxy'],
+  //},
+  // onerror: function(error) {},
+  // update_sounds: true // update the list of sounds every day - will
+  // prevent app from exiting.
+})
+
+var msg = {
+  // These values correspond to the parameters detailed on https://pushover.net/api
+  // 'message' is required. All other values are optional.
+  message: 'omg node test',	// required
+  title: "Well - this is fantastic",
+  sound: 'magic',
+  device: 'devicename',
+  priority: 1,
+  file: '/tmp/fantastic.png' // this will read using fs.readFileSync()!
+}
+
+p.send( msg, function( err, result ) {
+  if ( err ) {
+    throw err
+  }
+
+  console.log( result )
+})
+```
+
+### Sending a message with an attachment (non-blocking)
+```javascript
+
+var Push = require( 'pushover-notifications' )
+var fs = require( 'fs' )
+
+fs.readFile('/tmp/fantastic.png', function(err, data) {
+  var p = new Push( {
+    user: process.env['PUSHOVER_USER'],
+    token: process.env['PUSHOVER_TOKEN'],
+    // httpOptions: {
+    //   proxy: process.env['http_proxy'],
+    //},
+    // onerror: function(error) {},
+    // update_sounds: true // update the list of sounds every day - will
+    // prevent app from exiting.
+  })
+
+  var msg = {
+    // These values correspond to the parameters detailed on https://pushover.net/api
+    // 'message' is required. All other values are optional.
+    message: 'omg node test',	// required
+    title: "Well - this is fantastic",
+    sound: 'magic',
+    device: 'devicename',
+    priority: 1,
+    file: { name: 'fantastic.png', data: data }
+  }
+  
+  p.send( msg, function( err, result ) {
+    if ( err ) {
+      throw err
+    }
+  
+    console.log( result )
+  })
+})
+```
+
 ### Sending a message to multiple users
 
 ```javascript
@@ -80,6 +155,8 @@ var msg = {
   title: "Well - this is fantastic",
   sound: 'magic' // optional
   priority: 1 // optional,
+  file: '/tmp/fancy_image.png' // optional
+  // see test/test_img.js for more examples of attaching images
 }
 
 for ( var i = 0, l = users.length; i < l; i++ ) {

@@ -25,7 +25,5 @@ var msg = {
 }
 
 p.send(msg, function (err, result, res) {
-  console.log('error', err)
-  console.log('result', result)
-  console.log('res.headers', res.headers)
+  console.log('====> On error test')
 })
