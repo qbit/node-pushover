@@ -3,7 +3,8 @@ node_js:
 - node
 env:
   global:
-    secure: mQ+nJc9KqW2/rNR50lBpF+PV5Wxti006hQsi2qEHKU5bVCh2SdxR6MQNkuMSUYlr9xobNX4YG9i5G/d7PAclOBM9aePKC9in32MbMUgB8nM4/iKgf0v9tYnTOWSMWzBbOH+ZiyniWo5VAelvNm3qeQrGwrBf1INd8GEqGgXtY6s=
+  - secure: Ow2olcRp5ognkYZnCKk6UUiTYkxQKRm3WW9Yr2/SvHkZkcw3wWnJ2FC+cAAXjH0AV2L+W6jbpYWwAOWEQKOlNs3o545gu9pbw8U4M6XqI+kHxeesahCHalsQVAsPLk6g8U4c8u3fE86DHUUc3+YsuMQPh4E/tg/Ng2wtM1dkvE0=
+  - secure: KNp0NnvSKWckCrcwZpvuPAtrY9KYLUYo5sL+OQTKuEVvJQuyIGWGRMN33DpcRYD7mlImtqqj3HXksYiWCAnqC4sLU4tlMGvLodvsF0y9jZkXmtkNiWY0vU6+Z+21vsJxqWwUaEEj3udihAoX+S0nuhAz8URJ18y1DDzO/uG+phQ=
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y tinyproxy
