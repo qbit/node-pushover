@@ -2,8 +2,8 @@ language: node_js
 node_js:
 - node
 env:
-  matrix:
-    secure: BX0GyzK8qZAFJlpzJ2nLiaAy0e/wYmYhKTpRcMRcsipfoGeQSQ18B1HqC3Vy9SGc0hox8sVwS8KUPwMd0ZqRC0wOc57PioJC5bDmOZ48bQcREITlcO2b8RGaEdDosIXdinJ346LHUPccDGXLp2ZdKqVE4IV+xRA8o86KoTKmhh8=
+  global:
+    secure: mQ+nJc9KqW2/rNR50lBpF+PV5Wxti006hQsi2qEHKU5bVCh2SdxR6MQNkuMSUYlr9xobNX4YG9i5G/d7PAclOBM9aePKC9in32MbMUgB8nM4/iKgf0v9tYnTOWSMWzBbOH+ZiyniWo5VAelvNm3qeQrGwrBf1INd8GEqGgXtY6s=
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y tinyproxy
