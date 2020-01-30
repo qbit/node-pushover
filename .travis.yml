@@ -4,6 +4,7 @@ node_js:
 env:
   global:
   - secure: cji+CqW+TmOqGBGk30ijZRGZ9zwpVCncp6iptnpMXhEqBmGJ1Q15rEWZxAyqbqHeEsPqAlT1FecjuyCnTSVowxLJvfwLKUtsqeXSazNRJey22jee648UfNNxGSUjAL2fCK9AQlTZ0k4Jc0xVqodGNrQbzA2K82BC7oG6wOZDji0=
+  - secure: DpGUIEnMXXebOq5C2ConWx0KLNEXZ5UiZ2Gd3vPOXOyQuhevJM9c4F9j+6L5novFwNVs2ceksCr/aEt42hCaBqw+5PlpcBM9Ll+zK0PQrxoZPT2jzl0nHLufGtWT7sCYY7xWvR519iEM8pFNpkM9KYeRU9luY/8flP+L6jb34Os=
   matrix:
     secure: BX0GyzK8qZAFJlpzJ2nLiaAy0e/wYmYhKTpRcMRcsipfoGeQSQ18B1HqC3Vy9SGc0hox8sVwS8KUPwMd0ZqRC0wOc57PioJC5bDmOZ48bQcREITlcO2b8RGaEdDosIXdinJ346LHUPccDGXLp2ZdKqVE4IV+xRA8o86KoTKmhh8=
 before_install:
